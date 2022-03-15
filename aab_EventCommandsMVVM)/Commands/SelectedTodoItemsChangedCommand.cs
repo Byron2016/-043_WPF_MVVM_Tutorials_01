@@ -18,7 +18,7 @@ namespace aab_EventCommandsMVVM_.Commands
 
         public void Execute(object parameter)
         {
-
+            //Poner debug acá y cada vez q se selecciona un elemento va a llamar a este.
         }
     }
 }

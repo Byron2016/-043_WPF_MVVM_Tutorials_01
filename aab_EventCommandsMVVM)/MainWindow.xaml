@@ -12,7 +12,8 @@
     <Grid>
 
         <views:TodoList DataContext="{Binding TodoListViewModel}"
-                        LoadCommand="{Binding LoadTodoItemsCommand}"/>
+                        LoadCommand="{Binding LoadTodoItemsCommand}"
+                        SelectedTodoItemsChangedCommand="{Binding SelectedTodoItemsChangedCommand}"/>
 
     </Grid>
 </Window>
