@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <StackPanel Grid.Row="1"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+            <Button Margin="10"
+                        Width="200"
+                        Content="Home"/>
+            <Button Margin="10"
+                        Width="200"
+                        Content="Account"/>
+        </StackPanel>
     </Grid>
 </Window>

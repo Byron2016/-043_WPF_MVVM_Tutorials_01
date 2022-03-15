@@ -8,5 +8,18 @@ namespace aaa_SwitchingViewsMVVM.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
+        private BaseViewModel _selectedViewModel;
+
+        public BaseViewModel SelectedViewMode
+        {
+            get
+            {
+                return _selectedViewModel;
+            }
+            set
+            {
+                _selectedViewModel = value;
+            }
+        }
     }
 }
