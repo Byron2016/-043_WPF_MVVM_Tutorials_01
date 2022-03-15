@@ -9,7 +9,8 @@
              
              Loaded="UserControl_Loaded">
     <Grid>
-        <ListView Margin="50" 
+        <ListView x:Name="lvTodoItems" 
+                  Margin="50" 
                   SelectionMode="Multiple"
                   SelectionChanged="ListView_SelectionChanged"
                   ItemsSource="{Binding TodoItems}">
