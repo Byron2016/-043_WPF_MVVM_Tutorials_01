@@ -46,5 +46,10 @@ namespace aab_EventCommandsMVVM_.Views
                 LoadCommand.Execute(null);
             }
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
