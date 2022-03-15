@@ -2,8 +2,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:aaa_SwitchingViewsMVVM"
+             
+             xmlns:views="clr-namespace:aaa_SwitchingViewsMVVM.Views"
+             xmlns:viewsmodels="clr-namespace:aaa_SwitchingViewsMVVM.ViewModels"
+             
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <DataTemplate DataType="{x:Type viewsmodels:HomeViewModel}">
+            <views:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewsmodels:AccountViewModel}">
+            <views:AccountView/>
+        </DataTemplate>
          
     </Application.Resources>
 </Application>
