@@ -19,10 +19,14 @@
                         HorizontalAlignment="Center">
             <Button Margin="10"
                         Width="200"
-                        Content="Home"/>
+                        Content="Home"
+                    Command="{Binding UpdateViewCommand}"
+                    CommandParameter="Home"/>
             <Button Margin="10"
                         Width="200"
-                        Content="Account"/>
+                        Content="Account"
+                    Command="{Binding UpdateViewCommand}"
+                    CommandParameter="Account"/>
         </StackPanel>
     </Grid>
 </Window>
