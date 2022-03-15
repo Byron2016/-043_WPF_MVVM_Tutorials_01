@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aab_EventCommandsMVVM_.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace aab_EventCommandsMVVM_
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainViewModel();
         }
     }
 }
