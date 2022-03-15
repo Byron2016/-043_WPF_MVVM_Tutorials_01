@@ -21,6 +21,7 @@ namespace aaa_SwitchingViewsMVVM.ViewModels
             set
             {
                 _selectedViewModel = value;
+                OnPropertyChanged(nameof(SelectedViewMode));
             }
         }
 
