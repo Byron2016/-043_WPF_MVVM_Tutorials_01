@@ -28,9 +28,13 @@ namespace aab_EventCommandsMVVM_.ViewModels
 
 		public ICommand LoadTodoItemsCommand { get; set; }
 
+		public ICommand SelectedTodoItemsChangedCommand { get; set; }
+
 		public TodoListViewModel()
 		{
 			LoadTodoItemsCommand = new LoadTodoItemsCommand(this);
+
+			SelectedTodoItemsChangedCommand = new SelectedTodoItemsChangedCommand();
 
 
 			//LoadTodoItemsCommand.Execute(null);
