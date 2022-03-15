@@ -12,6 +12,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <ContentControl Content="{Binding SelectedViewMode}"/>
+
         <StackPanel Grid.Row="1"
                         Orientation="Horizontal"
                         HorizontalAlignment="Center">

@@ -8,7 +8,7 @@ namespace aaa_SwitchingViewsMVVM.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private BaseViewModel _selectedViewModel;
+        private BaseViewModel _selectedViewModel = new HomeViewModel();
 
         public BaseViewModel SelectedViewMode
         {
