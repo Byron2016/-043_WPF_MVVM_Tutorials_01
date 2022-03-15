@@ -31,6 +31,9 @@ namespace aab_EventCommandsMVVM_.ViewModels
 		public TodoListViewModel()
 		{
 			LoadTodoItemsCommand = new LoadTodoItemsCommand(this);
+
+
+			LoadTodoItemsCommand.Execute(null);
 		}
 	}
 }
