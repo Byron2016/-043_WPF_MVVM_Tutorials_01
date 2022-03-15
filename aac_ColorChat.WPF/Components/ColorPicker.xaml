@@ -76,12 +76,12 @@
                     HorizontalContentAlignment="Center"
                     Text="{Binding Blue, ElementName=root, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
+        </Grid>
 
-            <!-- Preview -->
-            <Rectangle Grid.Column="1" Margin="10 0 0 0"
+        <!-- Preview -->
+        <Rectangle Grid.Column="1" Margin="10 0 0 0"
             MaxWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
             Fill="{Binding ColorBrush, ElementName=root}" />
-        </Grid>
-            
+
     </Grid>
 </UserControl>
