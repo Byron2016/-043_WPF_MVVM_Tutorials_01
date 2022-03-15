@@ -1,14 +1,16 @@
-﻿using System;
+﻿using aaa_SwitchingViewsMVVM.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace aaa_SwitchingViewsMVVM.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private BaseViewModel _selectedViewModel = new HomeViewModel();
+        private BaseViewModel _selectedViewModel;
 
         public BaseViewModel SelectedViewMode
         {
@@ -20,6 +22,14 @@ namespace aaa_SwitchingViewsMVVM.ViewModels
             {
                 _selectedViewModel = value;
             }
+        }
+
+        public ICommand UpdateViewCommand { get; set; }
+
+        public MainViewModel()
+        {
+            UpdateViewCommand = new UpdateViewCommand(this);
+
         }
     }
 }
