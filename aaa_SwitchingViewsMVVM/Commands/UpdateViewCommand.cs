@@ -21,12 +21,21 @@ namespace aaa_SwitchingViewsMVVM.Commands
 
         public bool CanExecute(object? parameter)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public void Execute(object? parameter)
         {
-            throw new NotImplementedException();
+            if (parameter.ToString() == "Home")
+            {
+                _viewModel.SelectedViewMode = new HomeViewModel();
+
+            }
+            else if (parameter.ToString() == "Account")
+            {
+                _viewModel.SelectedViewMode = new AccountViewModel();
+
+            }
         }
     }
 }
