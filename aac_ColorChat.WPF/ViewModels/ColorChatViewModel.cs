@@ -1,4 +1,5 @@
-﻿using aac_ColorChat.WPF.Commands;
+﻿using aac_ColorChat.Domain.Models;
+using aac_ColorChat.WPF.Commands;
 using aac_ColorChat.WPF.Services;
 using System;
 using System.Collections.Generic;
@@ -94,6 +95,13 @@ namespace aac_ColorChat.WPF.ViewModels
             SendColorChatColorMessageCommand = new SendColorChatColorMessageCommand(this, chatService);
 
             Messages = new ObservableCollection<ColorChatColorViewModel>();
+
+            chatService.ColorMessageReceived += ChatService_ColorMessageReceived;
+        }
+
+        private void ChatService_ColorMessageReceived(ColorChatColor color)
+        {
+            Messages.Add(new ColorChatColorViewModel(color));
         }
     }
 }
