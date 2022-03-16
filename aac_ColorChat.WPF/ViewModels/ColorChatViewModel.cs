@@ -99,6 +99,23 @@ namespace aac_ColorChat.WPF.ViewModels
             chatService.ColorMessageReceived += ChatService_ColorMessageReceived;
         }
 
+        public static ColorChatViewModel CreatedConnectedViewModel(SignalRChatService chatService)
+        {
+            ColorChatViewModel viewModel = new ColorChatViewModel(chatService);
+
+            // Setup connection.
+            chatService.Connect().ContinueWith(task =>
+            {
+                //Si conexión falla hará esto.
+                if (task.Exception != null)
+                {
+                    viewModel.ErrorMessage = "Unable to connect to color chat hub";
+                }
+            });
+
+            return viewModel;
+        }
+
         private void ChatService_ColorMessageReceived(ColorChatColor color)
         {
             Messages.Add(new ColorChatColorViewModel(color));
