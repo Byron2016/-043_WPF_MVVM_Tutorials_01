@@ -23,5 +23,12 @@ namespace aac_ColorChat.WPF.Services
         {
             await _connection.StartAsync();
         }
+
+        public async Task SendColorMessage(ColorChatColor color)
+        {
+            // SendColorMessage fue definido en el servidor como un método de clase ColorChatHub
+            // El segundo parámetro color debe cuadrar con el parámetro que usa el método antes indicado.
+            await _connection.SendAsync("SendColorMessage", color);
+        }
     }
 }
