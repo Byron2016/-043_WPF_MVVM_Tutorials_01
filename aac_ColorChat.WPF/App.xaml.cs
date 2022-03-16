@@ -1,4 +1,5 @@
 ﻿using aac_ColorChat.WPF.ViewModels;
+using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,6 +17,14 @@ namespace aac_ColorChat.WPF
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            // El URL de conexión sale de ir al proyecto servidor, Properties/launchSettings.json
+            // sección profiles/aac_ColorChat.SignalR
+            // agregado el endPoint
+
+            HubConnection connection = new HubConnectionBuilder()
+                .WithUrl("http://localhost:5010/colorchat")
+                .Build();
+
             ColorChatViewModel chatViewModel = new ColorChatViewModel();
 
             MainWindow window = new MainWindow
