@@ -17,6 +17,9 @@ namespace aac_ColorChat.WPF.Services
         public SignalRChatService(HubConnection connection)
         {
             _connection = connection;
+
+            // "ReceiveColorMessage" fue definido en el servidor como un método de clase ColorChatHub
+            _connection.On<ColorChatColor>("ReceiveColorMessage", (color) => ColorMessageReceived?.Invoke(color));
         }
 
         public async Task Connect()
