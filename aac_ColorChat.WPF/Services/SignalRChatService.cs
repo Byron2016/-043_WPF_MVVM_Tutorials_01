@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
+﻿using aac_ColorChat.Domain.Models;
+using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace aac_ColorChat.WPF.Services
     public class SignalRChatService
     {
         private readonly HubConnection _connection;
+
+        public event Action<ColorChatColor> ColorMessageReceived;
 
         public SignalRChatService(HubConnection connection)
         {
