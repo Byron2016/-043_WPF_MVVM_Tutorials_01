@@ -1,4 +1,5 @@
-﻿using aac_ColorChat.WPF.ViewModels;
+﻿using aac_ColorChat.WPF.Services;
+using aac_ColorChat.WPF.ViewModels;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace aac_ColorChat.WPF
                 .WithUrl("http://localhost:5010/colorchat")
                 .Build();
 
-            ColorChatViewModel chatViewModel = new ColorChatViewModel();
+            ColorChatViewModel chatViewModel = new ColorChatViewModel(new SignalRChatService(connection));
 
             MainWindow window = new MainWindow
             {

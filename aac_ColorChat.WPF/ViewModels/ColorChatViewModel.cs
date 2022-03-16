@@ -1,9 +1,12 @@
-﻿using System;
+﻿using aac_ColorChat.WPF.Commands;
+using aac_ColorChat.WPF.Services;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace aac_ColorChat.WPF.ViewModels
 {
@@ -84,8 +87,12 @@ namespace aac_ColorChat.WPF.ViewModels
 
         public ObservableCollection<ColorChatColorViewModel> Messages { get; }
 
-        public ColorChatViewModel()
+        public ICommand SendColorChatColorMessageCommand { get; }
+
+        public ColorChatViewModel(SignalRChatService chatService)
         {
+            SendColorChatColorMessageCommand = new SendColorChatColorMessageCommand(this, chatService);
+
             Messages = new ObservableCollection<ColorChatColorViewModel>();
         }
     }
