@@ -18,5 +18,10 @@ namespace aac_ColorChat.WPF.Services
         {
             _connection = connection;
         }
+
+        public async Task Connect()
+        {
+            await _connection.StartAsync();
+        }
     }
 }
