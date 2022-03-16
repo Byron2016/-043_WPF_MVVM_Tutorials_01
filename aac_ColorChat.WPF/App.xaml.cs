@@ -22,8 +22,11 @@ namespace aac_ColorChat.WPF
             // sección profiles/aac_ColorChat.SignalR
             // agregado el endPoint
 
+            //string uri = "http://localhost:5010/colorchat"
+            string uri = "https://localhost:7010/colorchat";
+
             HubConnection connection = new HubConnectionBuilder()
-                .WithUrl("http://localhost:5010/colorchat")
+                .WithUrl(uri)
                 .Build();
 
             ColorChatViewModel chatViewModel =  ColorChatViewModel.CreatedConnectedViewModel(new SignalRChatService(connection));
