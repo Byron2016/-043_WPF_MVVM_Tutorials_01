@@ -33,7 +33,14 @@ namespace aad_AsyncCommands.Commands
         public async void Execute(object? parameter)
         {
             IsExecuting = true;
-            await ExecuteAsync(parameter);
+            try
+            {
+                await ExecuteAsync(parameter);
+            }
+            catch (Exception)
+            {
+
+            }
             IsExecuting = false;
         }
 
