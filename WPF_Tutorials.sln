@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aac_ColorChat.WPF", "aac_Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aac_ColorChat.SignalR", "aac_ColorChat.SignalR\aac_ColorChat.SignalR.csproj", "{DE628282-BDF8-44E0-BDCF-96B2C3523687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aad_AsyncCommands", "aad_AsyncCommands\aad_AsyncCommands.csproj", "{DD5D5EC0-67A2-4195-A691-965C6A311550}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DE628282-BDF8-44E0-BDCF-96B2C3523687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE628282-BDF8-44E0-BDCF-96B2C3523687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE628282-BDF8-44E0-BDCF-96B2C3523687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5D5EC0-67A2-4195-A691-965C6A311550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5D5EC0-67A2-4195-A691-965C6A311550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5D5EC0-67A2-4195-A691-965C6A311550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5D5EC0-67A2-4195-A691-965C6A311550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,5 +53,6 @@ Global
 		SolutionGuid = {0B16FE8C-B657-46AD-AF5C-963FB4A55E18}
 		SolutionGuid = {619E92D2-F204-473C-A29F-3157F2752256}
 		SolutionGuid = {8AC9A164-965E-465F-9BCD-24A290004BB8}
+		SolutionGuid = {F1726549-4BE0-44A2-9CD8-D053711230FE}
 	EndGlobalSection
 EndGlobal
