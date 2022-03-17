@@ -13,8 +13,9 @@ namespace aad_AsyncCommands.Commands
         private readonly LoginViewModel _loginViewModel;
         private readonly IAuthenticationService _authenticationService;
 
-        public LoginCommand(LoginViewModel loginViewModel, IAuthenticationService authenticationService, Action<Exception> onException)
+        public LoginCommand(LoginViewModel loginViewModel, IAuthenticationService authenticationService, Action<Exception> onException) : base(onException)
         {
+            //Nota: Action<Exception> onException) : base(onException) es agregado en 9.24
             _loginViewModel = loginViewModel;
             _authenticationService = authenticationService;
         }

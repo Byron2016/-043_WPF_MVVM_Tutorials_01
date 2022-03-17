@@ -9,6 +9,8 @@ namespace aad_AsyncCommands.Commands
 {
     public abstract class AsyncCommandBase : ICommand
     {
+        private readonly Action<Exception> _onException;
+
         private bool _isExecuting;
         public bool IsExecuting
         {
@@ -25,6 +27,11 @@ namespace aad_AsyncCommands.Commands
 
         public event EventHandler? CanExecuteChanged;
 
+        public AsyncCommandBase(Action<Exception> onException)
+        {
+            _onException = onException;
+        }
+
         public bool CanExecute(object? parameter)
         {
             return !IsExecuting;
@@ -37,9 +44,9 @@ namespace aad_AsyncCommands.Commands
             {
                 await ExecuteAsync(parameter);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _onException?.Invoke(ex); //Call CallBack with exception
             }
             IsExecuting = false;
         }

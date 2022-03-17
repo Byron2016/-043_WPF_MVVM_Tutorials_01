@@ -47,6 +47,8 @@ namespace aad_AsyncCommands.ViewModels
         public LoginViewModel()
         {
             //F1
+            //LoginCommand = new LoginCommand(this, new AuthenticationService());
+            //F1 Agregado 9.41
             LoginCommand = new LoginCommand(this, new AuthenticationService(), (ex) => StatusMessage = ex.Message);
 
         }
