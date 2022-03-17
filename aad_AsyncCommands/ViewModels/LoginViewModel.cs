@@ -70,7 +70,7 @@ namespace aad_AsyncCommands.ViewModels
             //Copiamos el contenido de LoginViewModel.ExecuteAsync y lo adaptamos
             StatusMessage = "Logging in...";
 
-            throw new Exception("Login Failed..."); //comentado 13.13
+            //throw new Exception("Login Failed..."); //comentado 13.13
             await new AuthenticationService().Login(Username);
 
             StatusMessage = "Successfully logged in.";
