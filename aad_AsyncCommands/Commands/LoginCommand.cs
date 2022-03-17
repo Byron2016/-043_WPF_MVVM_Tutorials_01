@@ -23,6 +23,7 @@ namespace aad_AsyncCommands.Commands
         {
             _loginViewModel.StatusMessage = "Logging in...";
 
+            throw new Exception("Login Failed...");
             await _authenticationService.Login(_loginViewModel.Username);
 
             _loginViewModel.StatusMessage = "Successfully logged in.";
