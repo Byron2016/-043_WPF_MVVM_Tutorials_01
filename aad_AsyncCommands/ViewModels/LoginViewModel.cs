@@ -1,4 +1,6 @@
-﻿using System;
+﻿using aad_AsyncCommands.Commands;
+using aad_AsyncCommands.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +43,13 @@ namespace aad_AsyncCommands.ViewModels
         public bool HasStatusMessage => !string.IsNullOrEmpty(StatusMessage);
 
         public ICommand LoginCommand { get; }
+
+        public LoginViewModel()
+        {
+            //F1
+            LoginCommand = new LoginCommand(this, new AuthenticationService(), (ex) => StatusMessage = ex.Message);
+
+        }
 
         
     }
