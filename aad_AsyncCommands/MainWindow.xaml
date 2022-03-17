@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:aad_AsyncCommands"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Async Commands" Height="450" Width="800"
+        
+        xmlns:views="clr-namespace:aad_AsyncCommands.Views">
     <Grid>
-
+        <views:LoginView/>
     </Grid>
 </Window>
