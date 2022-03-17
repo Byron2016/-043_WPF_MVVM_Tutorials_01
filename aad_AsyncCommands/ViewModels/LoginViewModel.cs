@@ -46,13 +46,35 @@ namespace aad_AsyncCommands.ViewModels
 
         public LoginViewModel()
         {
-            //F1
-            //LoginCommand = new LoginCommand(this, new AuthenticationService());
-            //F1 Agregado 9.41
-            LoginCommand = new LoginCommand(this, new AuthenticationService(), (ex) => StatusMessage = ex.Message);
+            string strCase = "F2";
+
+            if(strCase == "F1")
+            {
+                //F1
+                //LoginCommand = new LoginCommand(this, new AuthenticationService());
+                //F1 Agregado 9.41
+                LoginCommand = new LoginCommand(this, new AuthenticationService(), (ex) => StatusMessage = ex.Message);
+
+            }
+            else if (strCase == "F2")
+            {
+                //F2 11.56
+                LoginCommand = new AsyncRelayCommand(Login, (ex) => StatusMessage = ex.Message);
+            }
 
         }
 
-        
+        private async Task Login()
+        {
+            //F2 12.19
+            //Copiamos el contenido de LoginViewModel.ExecuteAsync y lo adaptamos
+            StatusMessage = "Logging in...";
+
+            await new AuthenticationService().Login(Username);
+
+            StatusMessage = "Successfully logged in.";
+        }
+
+
     }
 }

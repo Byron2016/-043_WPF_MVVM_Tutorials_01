@@ -8,13 +8,16 @@ namespace aad_AsyncCommands.Commands
 {
     public class AsyncRelayCommand : AsyncCommandBase
     {
-        public AsyncRelayCommand(Action<Exception> onException) : base(onException)
+        private readonly Func<Task> _callback;
+
+        public AsyncRelayCommand(Func<Task> callback, Action<Exception> onException) : base(onException)
         {
+            _callback = callback;
         }
 
-        protected override Task ExecuteAsync(object? parameter)
+        protected override async Task ExecuteAsync(object? parameter)
         {
-            throw new NotImplementedException();
+            await _callback();
         }
     }
 }
