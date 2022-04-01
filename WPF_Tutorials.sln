@@ -1,14 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aae_LayoutComponents_UserControlApproach", "aae_LayoutComponents_UserControlApproach\aae_LayoutComponents_UserControlApproach.csproj", "{28AE42F5-D534-47F4-B941-93887C7577B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28AE42F5-D534-47F4-B941-93887C7577B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AE42F5-D534-47F4-B941-93887C7577B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AE42F5-D534-47F4-B941-93887C7577B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AE42F5-D534-47F4-B941-93887C7577B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29EB7019-03E1-49BD-A197-608EFF9CC5E8}
 	EndGlobalSection
 EndGlobal
